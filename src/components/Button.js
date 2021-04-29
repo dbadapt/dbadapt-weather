@@ -1,6 +1,6 @@
 import "./styles/Button.css";
 
-function Button(props) {
+export default function Button(props) {
 
   return (
     <div className="component-button">
@@ -8,5 +8,3 @@ function Button(props) {
     </div>
   )
 }
-
-export default Button;

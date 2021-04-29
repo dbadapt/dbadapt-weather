@@ -25,7 +25,7 @@ const renderSuggestion = suggestion => (
   </div>
 );
 
-class Search extends PureComponent {
+export default class Search extends PureComponent {
   constructor() {
     super();
 
@@ -86,5 +86,3 @@ class Search extends PureComponent {
     );
   }
 }
-
-export default Search

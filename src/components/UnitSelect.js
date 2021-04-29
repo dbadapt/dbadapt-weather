@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./styles/UnitSelect.css";
 
-class UnitSelect extends Component {
+export default class UnitSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,5 +25,3 @@ class UnitSelect extends Component {
     );
   }
 }
-
-export default UnitSelect;

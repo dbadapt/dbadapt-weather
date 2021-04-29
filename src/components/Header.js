@@ -6,6 +6,9 @@ export default class Header extends PureComponent {
     return (
       <header className="component-header">
         dbadapt-weather
+        <p>OpenWeatherMap API demonstration in React prepared
+          by David Bennett for Darren Simmonds, VP of Engineering at Palmetto
+        </p>
       </header>
     );
   }

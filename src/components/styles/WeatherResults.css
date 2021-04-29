@@ -1,0 +1,27 @@
+.component-weatherresults {
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 30px;
+    min-width: 100px;
+    min-height: 30px;
+    border: solid;
+    border-width: 3px;
+    border-color: rgb(180, 180, 180);
+    overflow: hidden;
+  }
+
+  div.component-weatherresults img {
+    vertical-align: middle;
+  }
+
+  div.component-weatherresults th {
+    padding: 7px;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  div.component-weatherresults td {
+    padding: 7px;
+    text-align: left;
+    vertical-align: middle;
+  }
