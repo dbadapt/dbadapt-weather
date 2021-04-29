@@ -6,6 +6,7 @@ DATA_DIR="${UTIL_DIR}/../src/data"
 SRC_URL="http://bulk.openweathermap.org/sample/city.list.json.gz"
 
 # Download and decompress city data
+mkdir -p "${EXTDATA_DIR}"
 curl ${SRC_URL} > "${EXTDATA_DIR}/city.list.json.gz"
 gzip -df "${EXTDATA_DIR}/city.list.json.gz"
 
