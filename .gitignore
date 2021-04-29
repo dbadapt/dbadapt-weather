@@ -12,7 +12,7 @@
 /build
 
 # OpenWeatherMap source data (huge)
-/extdata/cities.list.json*
+/extdata
 
 # misc
 .DS_Store
