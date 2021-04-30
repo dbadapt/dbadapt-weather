@@ -1,6 +1,6 @@
 {
-    "DEV_WEATHER_URL": "http://localhost:3000/data/2.5",
-    "PRD_WEATHER_URL": "http://localhost/data/2.5",
+    "DEV_WEATHER_URL": "/data/2.5",
+    "PRD_WEATHER_URL": "/data/2.5",
     "OPENWEATHERMAP_API_KEY": "4ff9086409bab044f46489691f1c0d96",
     "WEATHER_ICON_IMG_BASE_URL": "http://openweathermap.org/img/wn/",
     "WEATHER_ICON_IMG_FORMAT": "png"
