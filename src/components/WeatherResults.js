@@ -43,6 +43,18 @@ export default class WeatherResults extends React.Component {
           let temp_postfix=(state.units === 'imperial' ? "F" : "C");
           let wind_postfix=(state.units === 'imperial' ? "MPH" : "M/S");
           let weatherIconURL=Cfg.WEATHER_ICON_IMG_BASE_URL+state.results.weather[0].icon+"."+Cfg.WEATHER_ICON_IMG_FORMAT;
+
+          // wind gust is not always in API result
+          let windGust="";
+          if (state.results.wind.gust) {
+            windGust = (
+              <tr>
+                <th>Wind Gust</th>
+                <td>{state.results.wind.gust} {wind_postfix}</td>
+              </tr>
+            );
+          }
+
           return(
            <div className="component-weatherresults">
              <table>
@@ -81,10 +93,7 @@ export default class WeatherResults extends React.Component {
                  <th>Wind Direction</th>
                  <td>{this.getCardinal(state.results.wind.deg)}</td>
                </tr>
-               <tr>
-                 <th>Wind Gust</th>
-                 <td>{state.results.wind.gust} {wind_postfix}</td>
-               </tr>
+               { windGust }
              </table>
              </div>
            )
