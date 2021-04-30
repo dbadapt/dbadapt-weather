@@ -2,6 +2,23 @@
 
 Palmetto Programming Challenge
 
+Features:
+* Autosuggestion interface allows automatic matching of US cities
+* Jest test for API class and main application
+* OpenWeatherMap.js API client is isomorphic will run in browser or node.js
+* Data ETL script for extracting US city names (/util/filter_us.*)
+* Dynamic data conversion between metric and imperial
+* Current weather image display
+* Wind direction converted from API degrees to compass direction
+* Local proxy for development mode to avoid CORS issue in dev
+* Fully containerized using 2-phase build definition
+* Container def uses nginx reverse proxy to avoid CORS issues in production
+* Full CI/CD using GCP Cloud Run with github action on trunk merge
+
+Lastest trunk merge to 'main' can always be tested live at:
+
+  https://dbadapt-weather-movn6w74va-uw.a.run.app/
+
 ### `npm start`
 
 Runs the app in the development mode.\
