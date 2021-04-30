@@ -24,3 +24,17 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### Containerize and run
+
+  From the project root directory:
+
+  ```shell
+  $ docker build -t dbadapt/dbadapt-weather .
+  $ docker run -it -p 80:80/tcp --rm --name react-app dbadapt/dbadapt-weather:latest
+  ```
+
+  You may then run the application via a local browser at http://localhost/
+
+  Use Ctrl-C to terminate and automatically remove container
+
