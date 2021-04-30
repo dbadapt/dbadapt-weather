@@ -1,12 +1,9 @@
 import "./styles/WeatherResults.css";
 import Cfg from "../config.json";
 import React from "react";
-import ReactDOM from "react-dom";
 
 export default class WeatherResults extends React.Component {
-    constructor() {
-        super();
-      }
+
       componentDidMount() {
         this.props.getResults();
       }
@@ -43,15 +40,15 @@ export default class WeatherResults extends React.Component {
         let state=this.props.getResults();
         if (!state) state={results:null,city:null,units:null,error:null};
         if (state.results != null) {
-          let temp_postfix=(state.units == 'imperial' ? "F" : "C");
-          let wind_postfix=(state.units == 'imperial' ? "MPH" : "M/S");
+          let temp_postfix=(state.units === 'imperial' ? "F" : "C");
+          let wind_postfix=(state.units === 'imperial' ? "MPH" : "M/S");
           let weatherIconURL=Cfg.WEATHER_ICON_IMG_BASE_URL+state.results.weather[0].icon+"."+Cfg.WEATHER_ICON_IMG_FORMAT;
           return(
            <div className="component-weatherresults">
              <table>
                <tr>
                  <th>Conditions</th>
-                 <td><img src={weatherIconURL}/>
+                 <td><img src={weatherIconURL} alt=""/>
                    {state.results.weather[0].main} - ({state.results.weather[0].description})</td>
                </tr>
                <tr>

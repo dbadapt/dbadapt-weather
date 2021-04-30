@@ -25,7 +25,7 @@ export default class App extends React.Component {
   setSearchCity = (searchCity) => {
     let newState={city: searchCity};
       // clear results if search box is empty
-      if (searchCity == null || searchCity == "") {
+      if (searchCity === null || searchCity === "") {
         newState.results=null;
         newState.error=null;
     }
@@ -51,7 +51,7 @@ export default class App extends React.Component {
     if (this.state.city && this.state.units) {
       // this should really be handled by a proper
       // multi-environment configuration system
-      if (process.env.NODE_ENV == 'development') {
+      if (process.env.NODE_ENV === 'development') {
         apiurl=Cfg.DEV_WEATHER_URL;
       } else {
         apiurl=Cfg.PRD_WEATHER_URL;
