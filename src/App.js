@@ -49,8 +49,9 @@ export default class App extends React.Component {
   weatherCall(params) {
     let apiurl=null;
     if (this.state.city && this.state.units) {
+      // this should really be handled by a proper
+      // multi-environment configuration system
       if (process.env.NODE_ENV == 'development') {
-        // run with proxy to avoid CORS issues
         apiurl=Cfg.DEV_WEATHER_URL;
       } else {
         apiurl=Cfg.PRD_WEATHER_URL;
