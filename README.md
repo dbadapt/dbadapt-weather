@@ -1,7 +1,5 @@
 # dbadapt-weather
 
-Palmetto Programming Challenge
-
 Features:
 * Autosuggestion interface allows automatic matching of US cities
 * Jest test for API class and main application
